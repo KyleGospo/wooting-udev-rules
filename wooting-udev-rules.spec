@@ -89,7 +89,11 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1302", MODE:="0660
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="130f", MODE:="0660", GROUP="input"
 EOF
 
-%post
+%post -n %{name}
+if [ -S /run/udev/control ]; then
+    udevadm control --reload
+    udevadm trigger
+fi
 
 %preun
 
