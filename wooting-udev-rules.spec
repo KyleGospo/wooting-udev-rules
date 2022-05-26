@@ -17,13 +17,13 @@ Provides access to Wooting devices to users within the input group
 
 install -d %{buildroot}%{_sysconfdir}/udev/rules.d
 cat > %{buildroot}%{_sysconfdir}/udev/rules.d/80-wooting.rules << EOF
-# Wooting One Legacy
+# Wooting One (Legacy)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", MODE:="0660", GROUP="input"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", RUN+="/usr/sbin/modprobe xpad", MODE:="0660", GROUP="input"
 # Wooting One update mode 
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2402", MODE:="0660", GROUP="input"
 
-# Wooting Two Legacy
+# Wooting Two (Legacy)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff02", MODE:="0660", GROUP="input"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff02", RUN+="/usr/sbin/modprobe xpad", MODE:="0660", GROUP="input"
 # Wooting Two update mode  
@@ -75,30 +75,30 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1222", MODE:="0660
 # Wooting Two HE update mode  
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="122f", MODE:="0660", GROUP="input"
 
-# Wooting 60HE
+# Wooting 60HE (AVR)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1300", MODE:="0660", GROUP="input"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1300", RUN+="/usr/sbin/modprobe xpad", MODE:="0660", GROUP="input"
-# Wooting 60HE Alt-gamepad mode
+# Wooting 60HE Alt-gamepad mode (AVR)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1301", MODE:="0660", GROUP="input"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1301", MODE:="0660", GROUP="input"
-# Wooting 60HE 2nd Alt-gamepad mode
+# Wooting 60HE 2nd Alt-gamepad mode (AVR)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1302", MODE:="0660", GROUP="input"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1302", MODE:="0660", GROUP="input"
 
-# Wooting 60HE update mode  
+# Wooting 60HE update mode (AVR)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="130f", MODE:="0660", GROUP="input"
 
-# Wooting 60HE ARM
+# Wooting 60HE (ARM)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1310", MODE:="0660", GROUP="input"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1310", RUN+="/usr/sbin/modprobe xpad", MODE:="0660", GROUP="input"
-# Wooting 60HE ARM Alt-gamepad mode
+# Wooting 60HE Alt-gamepad mode (ARM)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1311", MODE:="0660", GROUP="input"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1311", MODE:="0660", GROUP="input"
-# Wooting 60HE ARM 2nd Alt-gamepad mode
+# Wooting 60HE 2nd Alt-gamepad mode (ARM)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1312", MODE:="0660", GROUP="input"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="1312", MODE:="0660", GROUP="input"
 
-# Wooting 60HE ARM update mode  
+# Wooting 60HE update mode (ARM)
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="31e3", ATTRS{idProduct}=="131f", MODE:="0660", GROUP="input"
 EOF
 
