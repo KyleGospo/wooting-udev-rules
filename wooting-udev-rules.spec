@@ -2,7 +2,7 @@ Name:       wooting-udev-rules
 Version:    {{{ git_dir_version }}}
 Release:    1%{?dist}
 Summary:    udev rules for Wooting keyboards
-License:    GPLv2+
+License:    GPLv2
 URL:        https://github.com/KyleGospo/wooting-udev-rules
 BuildArch:  noarch
 
