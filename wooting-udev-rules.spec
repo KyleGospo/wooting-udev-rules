@@ -6,10 +6,13 @@ License:    GPLv2
 URL:        https://github.com/KyleGospo/wooting-udev-rules
 BuildArch:  noarch
 
+Source:     {{{ git_dir_pack }}}
+
 %description
 Provides access to Wooting devices to users within the input group
 
 %prep
+{{{ git_dir_setup_macro }}}
 
 %build
 
@@ -111,6 +114,8 @@ fi
 %preun
 
 %files
+%license LICENSE
+%doc README.md
 %{_sysconfdir}/udev/rules.d/80-wooting.rules
 
 # Finally, changes from the latest release of your application are generated from
