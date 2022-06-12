@@ -5,6 +5,6 @@ Package that provides udev rules for all [Wooting](https://wooting.io/) analog k
 
 ## Installing
 
-You can get releases for Fedora, RHEL, CentOS, OpenSUSE, and OpenMandriva from my [COPR](https://copr.fedorainfracloud.org/coprs/kylegospo/wooting-keyboards/).
+You can get releases for Fedora, RHEL, CentOS, OpenSUSE, and OpenMandriva from my [Copr](https://copr.fedorainfracloud.org/coprs/kylegospo/wooting-keyboards/).
 
-See also my patched xpad driver that adds support for the Xbox controller this keyboard emulates [here](https://github.com/KyleGospo/wooting-xpad-dkms).
+See also my patched xpad driver that adds support for the Xbox controllers these keyboards represent themselves as [here](https://github.com/KyleGospo/wooting-xpad-dkms).
