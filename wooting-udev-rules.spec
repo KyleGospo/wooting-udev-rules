@@ -1,12 +1,14 @@
-Name:       wooting-udev-rules
-Version:    {{{ git_dir_version }}}
-Release:    1%{?dist}
-Summary:    udev rules for Wooting keyboards
-License:    GPLv2
-URL:        https://github.com/KyleGospo/wooting-udev-rules
-BuildArch:  noarch
+Name:          wooting-udev-rules
+Version:       {{{ git_dir_version }}}
+Release:       1%{?dist}
+Summary:       udev rules for Wooting keyboards
+License:       GPLv2
+URL:           https://github.com/KyleGospo/wooting-udev-rules
+BuildArch:     noarch
 
-Source:     {{{ git_dir_pack }}}
+Source:        {{{ git_dir_pack }}}
+
+BuildRequires: systemd
 
 %description
 Provides access to Wooting devices to users within the input group
@@ -18,8 +20,8 @@ Provides access to Wooting devices to users within the input group
 
 %install
 
-install -d %{buildroot}%{_sysconfdir}/udev/rules.d
-cat > %{buildroot}%{_sysconfdir}/udev/rules.d/80-wooting.rules << EOF
+install -d %{buildroot}%{_udevrulesdir}
+cat > %{buildroot}%{_udevrulesdir}/80-wooting.rules << EOF
 # Wooting One Legacy
 SUBSYSTEM=="hidraw", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", MODE:="0660", GROUP="wheel"
 SUBSYSTEM=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="ff01", MODE:="0660", GROUP="wheel"
@@ -116,7 +118,7 @@ fi
 %files
 %license LICENSE
 %doc README.md
-%{_sysconfdir}/udev/rules.d/80-wooting.rules
+%_udevrulesdir/80-wooting.rules
 
 # Finally, changes from the latest release of your application are generated from
 # your project's Git history. It will be empty until you make first annotated Git tag.
